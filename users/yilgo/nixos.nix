@@ -12,6 +12,11 @@
     git
   ];
 
+  home.sessionVariables = {
+    GOPATH = "$HOME/go";
+    GOBIN = "$HOME/go/bin";
+  };
+
   programs.bash = {
     enable = true;
     shellAliases = {

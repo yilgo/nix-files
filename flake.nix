@@ -12,6 +12,8 @@
     # terrafrom 1.14.5
     terraform.url = "github:nixos/nixpkgs/7d2ae6d8b8b697b5114a4249d0d958ee5f23d8fe";
 
+    go.url = "github:nixos/nixpkgs/a1bab9e494f5f4939442a57a58d0449a109593fe";
+
     # fix vscode remote ssh server issue
     vscode-server.url = "github:nix-community/nixos-vscode-server";
 
@@ -30,6 +32,7 @@
       kubectl,
       terraform,
       home-manager,
+      go,
       ...
     }:
     let
@@ -37,6 +40,8 @@
       pkgs = import nixpkgs { inherit system; };
 
       pinnedPackages = {
+
+        go = (import go { inherit system; }).go;
 
         kubectl = (import kubectl { inherit system; }).kubectl;
 
@@ -64,10 +69,12 @@
 
         modules = [
           ./modules/common.nix
+          ./modules/containers.nix
           ./hosts/configuration.nix
           ./hosts/hardware-configuration.nix
           ./modules/services/ntp.nix
           ./modules/services/sshd.nix
+
 
           vscode-server.nixosModules.default
           (

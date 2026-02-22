@@ -27,7 +27,9 @@
     terraform-ls
     pinnedPackages.kubectl
     pinnedPackages.terraform
+    pinnedPackages.go
     nixfmt
+    wireguard-tools
   ];
 
   nix.settings.experimental-features = [
@@ -46,7 +48,7 @@
   system.stateVersion = "25.11";
 
   boot.loader.systemd-boot.enable = true;
-
+  boot.loader.systemd-boot.configurationLimit = 3;
 
   networking.networkmanager.enable = true;
 
