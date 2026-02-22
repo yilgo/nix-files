@@ -1,0 +1,4 @@
+users/yilgo/*
+!users/yilgo/nixos.nix
+
+
