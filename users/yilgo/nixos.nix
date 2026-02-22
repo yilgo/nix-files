@@ -10,6 +10,7 @@
     bat
     fzf
     git
+    incus
   ];
 
   home.sessionVariables = {
