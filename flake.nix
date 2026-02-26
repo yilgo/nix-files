@@ -69,7 +69,9 @@
 
         modules = [
           ./modules/common.nix
+          ./modules/hosts.nix
           ./modules/containers.nix
+          ./modules/data.nix
           ./hosts/configuration.nix
           ./hosts/hardware-configuration.nix
           ./modules/services/ntp.nix

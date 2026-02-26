@@ -41,7 +41,7 @@
   users.users.yilgo = {
     isNormalUser = true;
     home = "/home/yilgo";
-    extraGroups = [ "wheel", "incus-admin" ];
+    extraGroups = [ "wheel" "incus-admin" ];
     shell = pkgs.bash;
     hashedPassword = "$y$j9T$UZYTRILXHzHpShr50rBdk0$JmEnPnWen5sYEUmsdWJzVsSP20jlcTgcKxhVVO6MkA8";
   };
