@@ -31,6 +31,19 @@
     nixfmt
     wireguard-tools
     talosctl
+    openssl
+    zellij
+    sshuttle
+    kubectx
+    k9s
+    xsel
+    xclip
+    cmctl
+    kubernetes-helm
+    zoxide
+    ripgrep
+    jq
+    yq
   ];
 
   nix.settings.experimental-features = [

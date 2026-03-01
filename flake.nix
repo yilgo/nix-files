@@ -5,6 +5,8 @@
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
 
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+
     # pinned specific version of kubectl 1.35.0
     # https://www.nixhub.io/packages/kubectl
     kubectl.url = "github:nixos/nixpkgs/a1bab9e494f5f4939442a57a58d0449a109593fe";
